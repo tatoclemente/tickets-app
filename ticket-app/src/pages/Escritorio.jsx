@@ -35,7 +35,10 @@ export const Escritorio = () => {
         <Col span={ 20 }>
           <Title level={ 2 }>{ user.agente }</Title>
           <Text>Usted está trabajando en el escritorio: </Text>
-          <Text type='success'>{ user.escritorio }</Text>
+          <Text 
+            type='success'
+            style={{ fontSize: 20, fontWeight: 'bold' }}   
+          >{ user.escritorio }</Text>
         </Col>
         <Col span={ 4 } align='right'>
           <Button
@@ -54,9 +57,9 @@ export const Escritorio = () => {
 
       <Row>
         <Col>
-          <Text>Estátendiendo el ticket numero: </Text>
+          <Text>Está atendiendo el ticket numero: </Text>
           <Text
-            style={{ fontSize: 30 }} 
+            style={{ fontSize: 30,fontWeight: 'bold' }} 
             type='danger'>
             55
           </Text>
