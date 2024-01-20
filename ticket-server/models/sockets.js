@@ -28,6 +28,15 @@ class Sockets {
         
       })
 
+      socket.on('next-ticket', ({ agente: agent, escritorio: desk }, callback) => {
+        console.log({ agent, desk});
+        const ticket = this.ticketList.assignTicket(agent, desk)
+        callback(ticket)
+
+        this.io.emit( 'ticket-assigned', this.ticketList.last13 )
+
+      })
+
       // socket.on('mensaje-to-server', (data) => {
       //   console.log(data);
 
